@@ -79,14 +79,16 @@ const movementSystem = (world) => {
     Position.y[eid] += Velocity.y[eid]
     Position.z[eid] += Velocity.z[eid]
 
-    if (Position.x[eid] - Shape.radius[eid] < 0 || Position.x[eid] + Shape.radius[eid] > canvasWidth) {
-      Velocity.x[eid] *= -1.1;
-      // Velocity.x[eid] = -Velocity.x[eid]
+    if (Position.x[eid] - Shape.radius[eid] < 0) {
+      Velocity.x[eid] = Math.abs(Velocity.x[eid]);
+    } else if (Position.x[eid] + Shape.radius[eid] > canvasWidth) {
+      Velocity.x[eid] = -Math.abs(Velocity.x[eid]);
     }
 
-    if (Position.y[eid] - Shape.radius[eid] < 0 || Position.y[eid] + Shape.radius[eid] > canvasHeight) {
-      Velocity.y[eid] *= -1.1;
-      // Velocity.y[eid] = -Velocity.y[eid]
+    if (Position.y[eid] - Shape.radius[eid] < 0) {
+      Velocity.y[eid] = Math.abs(Velocity.y[eid]);
+    } else if (Position.y[eid] + Shape.radius[eid] > canvasHeight) {
+      Velocity.y[eid] = -Math.abs(Velocity.y[eid]);
     }
   }
   return world
