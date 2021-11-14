@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "parcel 'src/index.html' --port 8080 --open",
-    "build": "parcel build 'src/index.html' --public-url './'",
+    "prestart": "rm -rf dist",
+    "start": "parcel 'src/*.html' --port 8080 --open",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build 'src/*.html' --public-url './'",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
