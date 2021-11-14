@@ -93,9 +93,17 @@ const movementSystem = (world) => {
 }
 
 let canvas = document.querySelector("canvas");
-let canvasWidth = canvas.width = window.innerWidth;
-let canvasHeight = canvas.height = window.innerHeight;
 let ctx = canvas.getContext("2d");
+let canvasWidth = canvas.width = window.innerWidth
+let canvasHeight = canvas.height = window.innerHeight;
+
+if (window.devicePixelRatio > 1) {
+  canvas.width = canvasWidth * window.devicePixelRatio;
+  canvas.height = canvasHeight * window.devicePixelRatio;
+  canvas.style.width = `${canvasWidth}px`;
+  canvas.style.height = `${canvasHeight}px`;
+  ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+}
 
 const rendererSystem = (world) => {
   const ents = rendererQuery(world)
