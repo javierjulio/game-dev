@@ -145,7 +145,7 @@ const generateEntity = (x, y, vx, vy, radius) => {
 
 const DESIRED_NUM_OBJECTS = 100
 const MIN_RADIUS = 8
-const MAX_RADIUS = 30
+const MAX_RADIUS = 32
 const SPEED_MULTIPLIER = .4;
 
 const safeAreas = []
