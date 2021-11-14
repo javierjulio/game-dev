@@ -1,0 +1,20 @@
+{
+  "name": "game-dev-experiments",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel 'src/**/*.html' --port 8080 --open",
+    "build": "parcel build 'src/**/*.html'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1",
+    "parcel": "^2.0.1"
+  },
+  "dependencies": {
+    "bitecs": "^0.3.30",
+    "ecsy": "^0.2.6"
+  },
+  "packageManager": "yarn@3.1.0"
+}
