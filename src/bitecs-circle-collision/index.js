@@ -45,6 +45,7 @@ const collisionSystem = (world) => {
         const a_t = Velocity.x[eid] * unitTangentX + Velocity.y[eid] * unitTangentY
         const b_t = Velocity.x[id] * unitTangentX + Velocity.y[id] * unitTangentY
 
+        // TODO: replace radius (third instance) with a "mass" parameter
         const a_n_final = (a_n * (Shape.radius[eid] - Shape.radius[id]) +
           2 * Shape.radius[id] * b_n) / (Shape.radius[eid] + Shape.radius[id]);
         const b_n_final = (b_n * (Shape.radius[id] - Shape.radius[eid]) +
