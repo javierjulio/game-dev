@@ -2,17 +2,18 @@
   "name": "game-dev-experiments",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "prestart": "rm -rf dist",
-    "start": "parcel 'src/*.html' --port 8080 --open",
-    "prebuild": "rm -rf dist",
-    "build": "parcel build 'src/*.html' --public-url './'",
+    "start": "vite",
+    "build": "vite build",
+    "prepreview": "npm run build",
+    "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^2.1.1",
-    "parcel": "^2.0.1"
+    "vite": "^3.0.2"
   },
   "dependencies": {
     "bitecs": "^0.3.30",
