@@ -13,4 +13,4 @@ The circle collision math was from the video https://www.youtube.com/watch?v=XD-
 
 ## Deploy to GitHub Pages
 
-To build the production bundle and deploy run: `npm run build`.
+To build the production bundle and deploy run: `npm run deploy`.
