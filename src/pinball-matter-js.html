@@ -1,0 +1,126 @@
+<!-- https://codersblock.com/blog/javascript-physics-with-matter-js/ -->
+<!doctype html>
+<html>
+  <head>
+    <title>Pinball Matter.js</title>
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Hind');
+
+			html, body {
+        margin: 0;
+      }
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	color: #dee2e6;
+	background-color: #212529;
+	font-family: 'Hind', sans-serif;
+	text-transform: uppercase;
+}
+
+.container {
+	position: relative;
+	line-height: 0;
+}
+
+.score {
+	position: absolute;
+	top: 10px;
+	line-height: 1;
+}
+
+.score span {
+	font-size: 3.25rem;
+}
+
+.current-score {
+	left: 10px;
+}
+
+.high-score {
+	text-align: right;
+	right: 10px;
+}
+
+.trigger {
+  appearance: none;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	bottom: 10px;
+  border: 0;
+	border-radius: 50%;
+  color: inherit;
+	background-color: #e64980;
+	text-align: center;
+	line-height: 80px;
+	font-size: 1.25rem;
+  text-transform: inherit;
+	cursor: pointer;
+	user-select: none;
+  outline: none;
+}
+
+.left-trigger {
+	left: 10px;
+}
+
+.right-trigger {
+	right: 60px;
+}
+
+canvas {
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 5px 25px rgba(0, 0, 0, 0.75);
+}
+.container {
+  width: 500px;
+  height: 800px;
+  transform: scale(0.75);
+}
+/* responsive scaling, because pinball tables are tall */
+/* @media (min-height: 0px) {
+	.container { transform: scale(0.25); }
+}
+@media (min-height: 400px) {
+	.container { transform: scale(0.5); }
+}
+@media (min-height: 600px) {
+	.container { transform: scale(0.75); }
+}
+@media (min-height: 800px) {
+	.container { transform: scale(1); }
+} */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="score current-score">
+        score<br><span></span>
+      </div>
+      <div class="score high-score">
+        high score<br><span></span>
+      </div>
+      <button class="trigger left-trigger">tap!</button>
+      <button class="trigger right-trigger">tap!</button>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js'></script>
+    <script src="./pinball-matter-js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Pinball</title>
+    <style>
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        background-color: #212529;
+      }
+      /* canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+      } */
+    </style>
+    <script src='https://cdn.jsdelivr.net/npm/poly-decomp@0.3.0/build/decomp.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/matter-js@0.18.0/build/matter.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/matter-attractors@0.1.6/build/matter-attractors.min.js'></script>
+    <script type="module" src="./pinball/index.js"></script>
+  </head>
+  <body>
+    <!-- <canvas id="canvas"></canvas> -->
+    <div id="container"></div>
+  </body>
+</html>
