@@ -9,15 +9,14 @@
     "prepreview": "npm run build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages --dist dist --dotfiles"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1",
-    "vite": "^3.0.2"
+    "gh-pages": "^6.3.0",
+    "vite": "^7.2.2"
   },
   "dependencies": {
-    "bitecs": "^0.3.30",
+    "bitecs": "^0.3.40",
     "ecsy": "^0.2.6"
-  },
-  "packageManager": "yarn@3.1.0"
+  }
 }
