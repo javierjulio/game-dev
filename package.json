@@ -9,7 +9,8 @@
     "prepreview": "npm run build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages --dist dist --dotfiles"
+    "deploy": "gh-pages --dist dist --dotfiles",
+    "pyxel-examples": "uv run pyxel copy_examples"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
