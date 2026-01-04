@@ -1,7 +1,7 @@
 [project]
-name = "pyxel-test"
+name = "pyxel-game-dev"
 version = "0.1.0"
-description = "Add your description here"
+description = "Pyxel and Esper game development experiments."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
